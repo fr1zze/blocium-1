@@ -46,7 +46,7 @@ posts = [
 ]
 
 # Получаем публикацию по её id, а не по позиции в списке.
-POSTS_BY_ID = {post['id']: post for post in posts}
+posts_by_id = {post['id']: post for post in posts}
 
 
 def index(request):
@@ -57,7 +57,7 @@ def index(request):
 
 def post_detail(request, post_id):
     """Показать одну публикацию."""
-    post = POSTS_BY_ID.get(post_id)
+    post = posts_by_id.get(post_id)
 
     if post is None:
         raise Http404(f'Публикация с id={post_id} не найдена.')
