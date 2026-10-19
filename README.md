@@ -15,7 +15,6 @@ python -m venv venv
 Сайт доступен по адресу http://127.0.0.1:8000/.
 
 Проверки проекта:
-
 ```powershell
 .\venv\Scripts\python.exe -m pytest
 .\venv\Scripts\python.exe blogicum/manage.py check
